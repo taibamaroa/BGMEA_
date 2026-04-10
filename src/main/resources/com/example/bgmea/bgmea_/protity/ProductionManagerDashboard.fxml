@@ -1,14 +1,21 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.bgmea.bgmea_.protity.ProductionManagerDashboard"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="592.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bgmea.bgmea_.protity.ProductionManagerDashboard">
+    <children>
+        <Label layoutX="201.0" layoutY="32.0" style="-fx-font-size:18px; -fx-font-weight:bold;" text="Production Manager Dashboard" textFill="#0c87cf" />
+        <Button layoutX="216.0" layoutY="91.0" onAction="#user6Goal1" prefWidth="220" text="Plan Daily Production" textFill="#0c87cf" />
+        <Button layoutX="216.0" layoutY="139.0" onAction="#user6Goal2" prefWidth="220" text="Assign Workers to Production Line" textFill="#0c87cf" />
+        <Button layoutX="216.0" layoutY="192.0" onAction="#user6Goal3" prefWidth="220" text="Machine Maintenance Scheduling" textFill="#0c87cf" />
+        <Button layoutX="216.0" layoutY="238.0" onAction="#user6Goal4" prefWidth="220" text="Handle Production Delay" textFill="#0c87cf" />
+        <Button layoutX="216.0" layoutY="289.0" onAction="#user6Goal5" prefWidth="220" text="Worker Shift Assignment &amp; Approval" textFill="#0c87cf" />
+        <Button layoutX="216.0" layoutY="344.0" onAction="#user6Goal6" prefWidth="220" text="Coordinate with Quality Inspector" textFill="#0c87cf" />
+        <Button layoutX="216.0" layoutY="392.0" onAction="#user6Goal7" prefWidth="220" text="Assign Workers to Production Line" textFill="#0c87cf" />
+        <Button layoutX="216.0" layoutY="436.0" onAction="#user6Goal8" prefWidth="220" text="Optimize Production Efficiency" textFill="#0c87cf" />
+        <Button layoutX="287.0" layoutY="522.0" onAction="#LogoutBtn" prefWidth="100" text="Logout" textFill="#0c87cf" />
+    </children>
 </AnchorPane>

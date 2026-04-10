@@ -1,0 +1,36 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bgmea.bgmea_.protity.Qualityinspectorgoal1">
+
+    <children>
+
+        <!-- Title -->
+        <Label layoutX="150" layoutY="20" style="-fx-font-size:16px; -fx-font-weight:bold;" text="Batch Inspection " textFill="#0c87cf" />
+
+        <!-- Batch ID Input -->
+        <Label layoutX="50" layoutY="80" text="Batch ID:" />
+        <TextField fx:id="batchIdField" layoutX="150" layoutY="75" prefWidth="200" />
+
+        <Button layoutX="175.0" layoutY="284.0" onAction="#BatchsaveBtn" text="Save Data" />
+
+        <!-- Batch Details -->
+        <Label layoutX="50" layoutY="130" text="Batch Name:" />
+
+        <Label layoutX="52.0" layoutY="232.0" text="Production Date:" />
+
+        <Label layoutX="50.0" layoutY="177.0" text="Status:" />
+        <TextField fx:id="batchTF" layoutX="151.0" layoutY="126.0" />
+        <TextField fx:id="statusTF" layoutX="130.0" layoutY="174.0" />
+        <DatePicker fx:id="productionDate" layoutX="163.0" layoutY="228.0" />
+        <Button layoutX="408.0" layoutY="329.0" onAction="#ReturnHomeBtn" text="Return Home" textFill="#0c87cf" />
+        <Label fx:id="textlabel" layoutX="128.0" layoutY="342.0" prefHeight="18.0" prefWidth="114.0" />
+
+    </children>
+</AnchorPane>

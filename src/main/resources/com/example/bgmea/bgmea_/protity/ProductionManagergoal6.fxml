@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="508.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bgmea.bgmea_.protity.ProductionManagergoal6">
+
+    <children>
+
+        <!-- Title -->
+        <Label layoutX="186.0" layoutY="73.0" style="-fx-font-size:16px; -fx-font-weight:bold;" text="Coordinate with Quality Inspector" textFill="#0c87cf" />
+
+        <!-- TableView: Pending Batches -->
+        <TableView fx:id="batchTable" layoutX="55.0" layoutY="268.0" prefHeight="127.0" prefWidth="500">
+
+            <columns>
+                <TableColumn fx:id="colBatchId" prefWidth="150" text="Batch ID" />
+                <TableColumn fx:id="colProduct" prefWidth="180" text="Product" />
+                <TableColumn fx:id="colStatus" prefWidth="170" text="Status" />
+            </columns>
+
+        </TableView>
+
+        <!-- Button -->
+        <Button layoutX="231.0" layoutY="410.0" onAction="#adddatatoSendRequest" text="Send Inspection Request" />
+
+        <!-- Confirmation Label -->
+        <Label fx:id="confirmationLabel" layoutX="164.0" layoutY="454.0" style="-fx-text-fill: red; -fx-font-weight:bold;" text="No request sent" />
+        <Button layoutX="475.0" layoutY="450.0" onAction="#ReturnHomeBtn" text="Return Home" textFill="#0c87cf" />
+        <Label layoutX="170.0" layoutY="200.0" text="Product :" />
+        <Label layoutX="170.0" layoutY="162.0" text="Batch ID :" />
+        <TextField fx:id="batchTF" layoutX="239.0" layoutY="158.0" />
+        <TextField fx:id="producTf" layoutX="239.0" layoutY="196.0" />
+
+    </children>
+</AnchorPane>
