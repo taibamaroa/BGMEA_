@@ -75,7 +75,7 @@ public class FinanceDashboard {
             Scene scene = ((Button) actionEvent.getSource()).getScene();
             Stage stage = (Stage) scene.getWindow();
 
-            FXMLLoader scene2FxmlLoader = new FXMLLoader(FinanceDashboard.class.getResource("/com/example/bgmea/Taiba/Finance4.fxml"));
+            FXMLLoader scene2FxmlLoader = new FXMLLoader(FinanceDashboard.class.getResource("/com/example/bgmea/bgmea_/Taiba/Finance4.fxml"));
             Scene scene2 = new Scene(scene2FxmlLoader.load());
             stage.setScene(scene2);
         } catch (Exception e) {
