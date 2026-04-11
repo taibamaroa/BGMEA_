@@ -9,6 +9,13 @@ public class QualityinspectorModelclass1 implements Serializable {
     private int quantity;
     private String batch;
 
+    public QualityinspectorModelclass1(String defectId, String defectType, int quantity, String batch) {
+        this.defectId = defectId;
+        this.defectType = defectType;
+        this.quantity = quantity;
+        this.batch = batch;
+    }
+
     public String getDefectId() {
         return defectId;
     }
@@ -49,13 +56,5 @@ public class QualityinspectorModelclass1 implements Serializable {
                 ", quantity=" + quantity +
                 ", batch='" + batch + '\'' +
                 '}';
-    }
-
-    public QualityinspectorModelclass1(String defectId, String defectType, int quantity, String batch) {
-        this.defectId = defectId;
-        this.defectType = defectType;
-        this.quantity = quantity;
-        this.batch = batch;
-
     }
 }

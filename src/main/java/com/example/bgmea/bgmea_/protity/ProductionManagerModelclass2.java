@@ -9,6 +9,13 @@ public class ProductionManagerModelclass2 implements Serializable {
     private int delayDays;
     private String status;
 
+    public ProductionManagerModelclass2(String orderId, String product, int delayDays, String status) {
+        this.orderId = orderId;
+        this.product = product;
+        this.delayDays = delayDays;
+        this.status = status;
+    }
+
     public String getOrderId() {
         return orderId;
     }
@@ -19,6 +26,10 @@ public class ProductionManagerModelclass2 implements Serializable {
 
     public int getDelayDays() {
         return delayDays;
+    }
+
+    public String getStatus() {
+        return status;
     }
 
     public void setOrderId(String orderId) {
@@ -35,11 +46,6 @@ public class ProductionManagerModelclass2 implements Serializable {
 
     public void setStatus(String status) {
         this.status = status;
-    }
-
-    public String getStatus() {
-        return status;
-
     }
 
     @Override

@@ -1,6 +1,7 @@
 module com.example.bgmea.bgmea_ {
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.graphics;
 
     opens com.example.bgmea.bgmea_ to javafx.fxml;
     opens com.example.bgmea.bgmea_.Taiba to javafx.fxml;

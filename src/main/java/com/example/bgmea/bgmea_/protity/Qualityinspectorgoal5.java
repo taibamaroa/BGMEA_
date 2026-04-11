@@ -61,14 +61,14 @@ public class Qualityinspectorgoal5 {
 
         rejectedTable.getItems().addAll(list);
 
-    @FXML
-    void ReturnHomeBtn(ActionEvent event) {
+        @FXML
+        void ReturnHomeBtn (ActionEvent event){
 
-    }
+        }
 
-    @FXML
-    void rejectdata(ActionEvent event) {
+        @FXML
+        void rejectdata (ActionEvent event){
 
-    }
+        }
 
-}
+    }}

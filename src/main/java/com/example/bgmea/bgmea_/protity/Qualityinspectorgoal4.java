@@ -1,27 +1,62 @@
 package com.example.bgmea.bgmea_.protity;
 
-public class Qualityinspectorgoal4
-{
-    @javafx.fxml.FXML
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+public class Qualityinspectorgoal4 {
+
+    @FXML
     private DatePicker fromDate;
-    @javafx.fxml.FXML
+
+    @FXML
     private TextArea reportArea;
-    @javafx.fxml.FXML
+
+    @FXML
+    private ChoiceBox<String> reportTypeChoicebox;
+
+    @FXML
     private DatePicker toDate;
-    @javafx.fxml.FXML
-    private ChoiceBox reportTypeChoicebox;
-    @javafx.fxml.FXML
+    @FXML
     private Label statusLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
+        reportTypeChoicebox.getItems().addAll("Daily", "Weekly", "Monthly");
 
-    @javafx.fxml.FXML
-    public void GenerateReportBtn(ActionEvent actionEvent) {
     }
+    @FXML
+    void GenerateReportBtn(ActionEvent event) {
+        if (fromDate.getValue() == null || toDate.getValue() == null) {
+            statusLabel.setText("Select dates first!");
+            return;
+        }
 
-    @javafx.fxml.FXML
-    public void ReturnHomeBtn(ActionEvent actionEvent) {
-    }
+        reportArea.setText(
+                "Report generated from " + fromDate.getValue() +
+                        " to " + toDate.getValue()
+        );
+
+        statusLabel.setText("Done!"); }
+
+    @FXML
+    void ReturnHomeBtn(ActionEvent actionEvent) throws IOException {
+
+        try {
+            Scene scene = ((Button) actionEvent.getSource()).getScene();
+            Stage stage = (Stage) scene.getWindow();
+
+            FXMLLoader scene2FxmlLoader = new FXMLLoader(QualityinspectorDashboard.class.getResource("/com/example/bgmea/Shahtaz/QualityinspectorDashboard.fxml"));
+            Scene scene2 = new Scene(scene2FxmlLoader.load());
+            stage.setScene(scene2);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }}
+
 }

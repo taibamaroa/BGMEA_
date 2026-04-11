@@ -2,14 +2,15 @@ package com.example.bgmea.bgmea_.protity;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
-import static com.example.bgmea.bgmea_.protity.ProductionManagergoal1.list;
+import java.io.IOException;
+import java.util.ArrayList;
+
 
 public class ProductionManagergoal4 {
 
@@ -20,7 +21,7 @@ public class ProductionManagergoal4 {
     private TableColumn<ProductionManagerModelclass2, String> colOrderId;
 
     @FXML
-    private TableColumn<ProductionManagerModelclass2, String> colProduct;
+    private TableColumn<ProductionManagerModelclass1, String> colProduct;
 
     @FXML
     private TableColumn<ProductionManagerModelclass2, String> colStatus;
@@ -29,7 +30,7 @@ public class ProductionManagergoal4 {
     private TextField daysTF;
 
     @FXML
-    private TableView<?> delayTable;
+    private TableView<ProductionManagerModelclass2> delayTable;
 
     @FXML
     private TextField orderidTF;
@@ -42,17 +43,8 @@ public class ProductionManagergoal4 {
 
     @FXML
     private Label statusLabel;
-    
 
-    @FXML
-    void ReturnHomeBtn(ActionEvent event) {
-
-    }
-
-    @FXML
-    void UpdateDelayBtn(ActionEvent event) {
-
-    }
+    static ArrayList<ProductionManagerModelclass2> list = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -63,6 +55,44 @@ public class ProductionManagergoal4 {
         delayTable.getItems().addAll(list);
 
 
+    }
+
+    @FXML
+    void ReturnHomeBtn(ActionEvent actionEvent) throws IOException {
+
+        try {
+            Stage stage = (Stage) ((Button) actionEvent.getSource()).getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(
+                    ProductionManagerDashboard.class.getResource(
+                            "/com/example/bgmea/bgmea_/protity/ProductionManagerDashboard.fxml"
+                    )
+            );
+            stage.setScene(new Scene(loader.load()));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void UpdateDelayBtn(ActionEvent event) {
+        String orderId = orderidTF.getText();
+        String product = productTF.getText();
+        String daysText = daysTF.getText();
+
+        if (orderId.isEmpty() || product.isEmpty() || daysText.isEmpty()) {
+            statusLabel.setText("Fill all fields!");
+            return;
         }
 
+        int days = Integer.parseInt(daysText);
+
+        ProductionManagerModelclass2 data =
+                new ProductionManagerModelclass2(orderId, product, days, "Delayed");
+
+        delayTable.getItems().add(data);
+
+        statusLabel.setText("Added to table!");
     }
+
+}

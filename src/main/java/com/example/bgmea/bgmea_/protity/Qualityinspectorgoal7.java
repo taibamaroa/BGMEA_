@@ -1,10 +1,6 @@
 package com.example.bgmea.bgmea_.protity;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+
 
 public class Qualityinspectorgoal7 {
 

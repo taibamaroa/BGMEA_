@@ -52,8 +52,6 @@ public class ProductionManagergoal1 {
     @FXML
     public void SavePlan(ActionEvent actionEvent) {
 
-
-
         String line = lineChoice.getValue();
         String workerText = workerField.getText();
         String targetText = targetField.getText();
@@ -65,13 +63,17 @@ public class ProductionManagergoal1 {
 
         try {
             int workers = Integer.parseInt(workerText);
-            int target = Integer.parseInt(targetText);
 
             ProductionManagerModelclass1 data =
-                    new ProductionManagerModelclass1(line,"Assigned", workers);
+                    new ProductionManagerModelclass1(line,workers,"Assigned");
 
             list.add(data);
 
+
+            messageLabel.setText("Saved successfully!");
+
+            workerField.clear();
+            targetField.clear();
             File f = new File("ProductionPlan.bin");
             ObjectOutputStream oos;
 
@@ -84,10 +86,6 @@ public class ProductionManagergoal1 {
             oos.writeObject(data);
             oos.close();
 
-            messageLabel.setText("Saved successfully!");
-
-            workerField.clear();
-            targetField.clear();
 
         } catch (NumberFormatException e) {
             messageLabel.setText("Enter valid numbers!");

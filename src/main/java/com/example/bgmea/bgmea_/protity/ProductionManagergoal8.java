@@ -2,14 +2,20 @@ package com.example.bgmea.bgmea_.protity;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
-public class ProductionManagergoal7 {
+public class ProductionManagergoal8 {
 
     @FXML
-    private DatePicker fromDate;
+    private TextField efficiencyTF;
+
+    @FXML
+    private TextField labourTF;
+
+    @FXML
+    private TextField productionTF;
 
     @FXML
     private TextArea reportArea;
@@ -18,10 +24,7 @@ public class ProductionManagergoal7 {
     private Label statusLabel;
 
     @FXML
-    private DatePicker toDate;
-
-    @FXML
-    void GenerateReport(ActionEvent event) {
+    void AnalyzeBtn(ActionEvent event) {
 
     }
 
