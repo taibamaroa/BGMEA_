@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bgmea.bgmea_.Taiba.HRDashboard">
+
+    <children>
+
+        <!-- Title -->
+        <Label layoutX="250" layoutY="20" style="-fx-font-size:18px; -fx-font-weight:bold;" text="HR Manager Dashboard" textFill="#1bb74f" />
+
+        <!-- Navigation Buttons -->
+
+        <Button layoutX="80.0" layoutY="130.0" onAction="#goToHR2" prefWidth="200" text="Audit Update" textFill="#1bb74f" />
+
+        <Button layoutX="80.0" layoutY="180.0" onAction="#goToHR3" prefWidth="200" text="Worker Claim" textFill="#1bb74f" />
+
+        <Button layoutX="80.0" layoutY="230.0" onAction="#goToHR4" prefWidth="200" text="Labor Dispute" textFill="#1bb74f" />
+
+        <Button layoutX="403.0" layoutY="80.0" onAction="#goToHR5" prefWidth="200" text="Issue ID Cards" textFill="#1bb74f" />
+
+        <Button layoutX="403.0" layoutY="130.0" onAction="#goToHR6" prefWidth="200" text="Training Schedule" textFill="#1bb74f" />
+
+        <Button layoutX="403.0" layoutY="180.0" onAction="#goToHR7" prefWidth="200" text="Attendance Review" textFill="#1bb74f" />
+
+        <Button layoutX="403.0" layoutY="230.0" onAction="#goToHR8" prefWidth="200" text="Factory Status" textFill="#1bb74f" />
+
+        <!-- Logout / Back -->
+        <Button layoutX="300" layoutY="300" onAction="#Logout" prefWidth="120" text="Logout" textFill="#1bb74f" />
+        <Button layoutX="80.0" layoutY="79.0" mnemonicParsing="false" onAction="#goToHR1" prefHeight="26.0" prefWidth="200.0" text="Add Worker" textFill="#1bb74f" />
+
+    </children>
+</AnchorPane>

@@ -1,6 +1,6 @@
 package com.example.bgmea.bgmea_.protity;
 
-import com.example.bgmea.AppendableObjectOutputStream;
+import com.example.bgmea.bgmea_.AppendableObjectOutputStream;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -65,9 +65,10 @@ public class ProductionManagergoal1 {
 
         try {
             int workers = Integer.parseInt(workerText);
+            int target = Integer.parseInt(targetText);
 
             ProductionManagerModelclass1 data =
-                    new ProductionManagerModelclass1(line, workers, "Assigned");
+                    new ProductionManagerModelclass1(line,"Assigned", workers);
 
             list.add(data);
 
