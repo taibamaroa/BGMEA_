@@ -1,0 +1,49 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="475.0" prefWidth="612.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bgmea.bgmea_.protity.Qualityinspectorgoal2">
+
+    <children>
+
+        <!-- Title -->
+        <Label layoutX="170" layoutY="20" style="-fx-font-size:16px; -fx-font-weight:bold;" text="Record Defect Details" textFill="#1095dc" />
+
+        <!-- Defect ID -->
+        <Label layoutX="50" layoutY="80" text="Defect ID:" />
+        <TextField fx:id="defectIdField" layoutX="180" layoutY="75" prefWidth="200" />
+
+        <!-- Defect Type -->
+        <Label layoutX="50" layoutY="120" text="Defect Type:" />
+        <TextField fx:id="defectTypeField" layoutX="180" layoutY="115" prefWidth="200" />
+
+        <!-- Quantity -->
+        <Label layoutX="50" layoutY="160" text="Quantity:" />
+        <TextField fx:id="quantityField" layoutX="180" layoutY="155" prefWidth="200" />
+
+        <!-- Buttons -->
+        <Button layoutX="280.0" layoutY="202.0" onAction="#savebtn" text="Save Defect" />
+
+        <Button layoutX="429.0" layoutY="425.0" onAction="#ReturnHomeBtn" text="Return Home" textFill="#0c87cf" />
+
+        <!-- TableView -->
+        <TableView fx:id="defectTable" layoutX="50" layoutY="250" prefHeight="120" prefWidth="500">
+
+            <columns>
+                <TableColumn fx:id="colDefectId" prefWidth="120" text="Defect ID" />
+                <TableColumn fx:id="colType" prefWidth="150" text="Type" />
+                <TableColumn fx:id="colQuantity" prefWidth="100" text="Quantity" />
+                <TableColumn fx:id="colBatch" prefWidth="130" text="Batch ID" />
+            </columns>
+
+        </TableView>
+        <Label fx:id="msglabel" layoutX="180.0" layoutY="402.0" prefHeight="18.0" prefWidth="98.0" />
+
+    </children>
+</AnchorPane>

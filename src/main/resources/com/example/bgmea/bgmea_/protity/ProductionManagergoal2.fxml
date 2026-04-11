@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="459.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bgmea.bgmea_.protity.ProductionManagergoal2">
+
+    <children>
+
+        <!-- Title -->
+        <Label layoutX="162.0" layoutY="82.0" style="-fx-font-size:16px; -fx-font-weight:bold;" text="Assign Workers to Production Line" textFill="#0c87cf" />
+
+        <!-- Buttons -->
+        <Button layoutX="200" layoutY="160" onAction="#AssignWorkersBtn" prefHeight="26.0" prefWidth="214.0" text="Assign Workers" />
+
+        <!-- TableView -->
+        <TableView fx:id="assignmentTable" layoutX="50" layoutY="210" prefHeight="150" prefWidth="500">
+
+            <columns>
+                <TableColumn fx:id="colLine" prefWidth="150" text="Production Line" />
+                <TableColumn fx:id="colWorkers" prefWidth="150" text="Workers Assigned" />
+                <TableColumn fx:id="colStatus" prefWidth="200" text="Status" />
+            </columns>
+
+        </TableView>
+        <Button layoutX="443.0" layoutY="401.0" onAction="#ReturnHomeBtn" text="Return Home" textFill="#0c87cf" />
+        <Label fx:id="msglabel" layoutX="207.0" layoutY="376.0" prefHeight="18.0" prefWidth="172.0" />
+
+    </children>
+</AnchorPane>
