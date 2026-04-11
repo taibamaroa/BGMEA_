@@ -29,7 +29,7 @@
         <!-- Buttons -->
         <Button layoutX="118.0" layoutY="200.0" onAction="#ConfirmPaymentbtn" text="Confirm Payment" />
 
-        <!-- TableView -->
+
         <TableView fx:id="paymentTable" layoutX="50.0" layoutY="278.0" prefHeight="120" prefWidth="500">
 
             <columns>
