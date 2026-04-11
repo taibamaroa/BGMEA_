@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bgmea.bgmea_.Taiba.Finance4">
+
+    <children>
+
+        <!-- Title -->
+        <Label layoutX="180" layoutY="20" style="-fx-font-size:16px; -fx-font-weight:bold;" text="Audit Fee Collection" textFill="#1bb74f" />
+
+        <!-- Factory Selection -->
+        <Label layoutX="50" layoutY="80" text="Select Factory:" />
+        <ChoiceBox fx:id="factoryChoicebox" layoutX="160" layoutY="75" prefWidth="200" />
+
+        <!-- Audit Date -->
+        <Label layoutX="50" layoutY="120" text="Audit Date:" />
+        <DatePicker fx:id="auditDatepic" layoutX="160" layoutY="115" prefWidth="200" />
+
+        <!-- Buttons -->
+        <Button layoutX="203.0" layoutY="159.0" onAction="#RecordFeebtn" text="Record Fee" />
+
+        <!-- Invoice Area -->
+        <Label layoutX="50" layoutY="210" text="Invoice:" />
+        <TextArea fx:id="invoicetextArea" layoutX="110.0" layoutY="210.0" prefHeight="71.0" prefWidth="323.0" />
+        <Button layoutX="410.0" layoutY="320.0" onAction="#returnBtn" text="Return Home" textFill="#1bb74f" />
+
+    </children>
+</AnchorPane>

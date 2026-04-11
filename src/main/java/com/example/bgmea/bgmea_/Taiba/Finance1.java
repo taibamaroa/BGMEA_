@@ -1,7 +1,5 @@
 package com.example.bgmea.bgmea_.Taiba;
 
-import com.example.bgmea.bgmea_.AppendableObjectOutputStream;
-import com.example.bgmea.bgmea_.Taiba.FinanceDashboard;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,10 +8,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -103,7 +98,7 @@ public class Finance1 {
             Scene scene = ((Button) actionEvent.getSource()).getScene();
             Stage stage = (Stage) scene.getWindow();
 
-            FXMLLoader scene2FxmlLoader = new FXMLLoader(FinanceDashboard.class.getResource("/com/example/bgmea/Taiba/FinanceDashboard.fxml"));
+            FXMLLoader scene2FxmlLoader = new FXMLLoader(FinanceDashboard.class.getResource("/com/example/bgmea/bgmea_/Taiba/FinanceDashboard.fxml"));
             Scene scene2 = new Scene(scene2FxmlLoader.load());
             stage.setScene(scene2);
         } catch (Exception e) {

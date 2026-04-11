@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bgmea.bgmea_.Taiba.Finance6">
+
+    <children>
+
+        <!-- Title -->
+        <Label layoutX="180" layoutY="20" style="-fx-font-size:16px; -fx-font-weight:bold;" text="Bank Statement Sync" textFill="#1bb74f" />
+
+        <!-- Bank Branch Code -->
+        <Label layoutX="50" layoutY="80" text="Branch Code:" />
+        <TextField fx:id="branchField" layoutX="150" layoutY="75" prefWidth="200" />
+
+        <!-- Sync Button -->
+        <Button layoutX="396.0" layoutY="75.0" onAction="#Syncbtn" text="Sync Now" />
+
+        <!-- TableView for Transactions -->
+        <TableView fx:id="transactionTable" layoutX="50" layoutY="160" prefHeight="150" prefWidth="500">
+
+            <columns>
+                <TableColumn fx:id="colTransId" prefWidth="150" text="Transaction ID" />
+                <TableColumn fx:id="colDate" prefWidth="150" text="Date" />
+                <TableColumn fx:id="colAmount" prefWidth="100" text="Amount" />
+                <TableColumn fx:id="colType" prefWidth="100" text="Type" />
+            </columns>
+
+        </TableView>
+        <Button layoutX="430.0" layoutY="340.0" onAction="#returnBtn" text="Return Home" textFill="#1bb74f" />
+        <Label fx:id="msgabel" layoutX="222.0" layoutY="119.0" prefHeight="18.0" prefWidth="143.0" />
+
+    </children>
+</AnchorPane>

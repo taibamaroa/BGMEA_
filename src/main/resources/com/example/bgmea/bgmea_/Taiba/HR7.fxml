@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bgmea.bgmea_.Taiba.HR7">
+
+    <children>
+
+        <!-- Title -->
+        <Label layoutX="250" layoutY="10" style="-fx-font-size:16px; -fx-font-weight:bold;" text="Attendance Review" textFill="#1bb74f" />
+
+        <!-- Event 1: Input -->
+        <Label layoutX="40" layoutY="70" text="Factory ID" />
+        <TextField fx:id="factoryIdField" layoutX="130" layoutY="65" prefWidth="120" />
+
+        <Label layoutX="280" layoutY="70" text="Date" />
+        <DatePicker fx:id="datePicker" layoutX="330" layoutY="65" />
+
+        <!-- Event 2: Fetch Data -->
+        <Button layoutX="260.0" layoutY="312.0" onAction="#fetchBtn" prefHeight="26.0" prefWidth="157.0" text="Fetch Data" />
+
+        <!-- TableView -->
+        <TableView fx:id="attendanceTable" layoutX="40" layoutY="120" prefHeight="143.0" prefWidth="499.0">
+
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="150" text="Worker ID" />
+                <TableColumn fx:id="colName" prefWidth="200" text="Name" />
+                <TableColumn fx:id="colStatus" prefWidth="150" text="Status" />
+            </columns>
+
+        </TableView>
+
+        <!-- Event 3: Manual Check -->
+        <Label layoutX="23.0" layoutY="282.0" style="-fx-font-style:italic;" text="Check anomalies manually (e.g., Absent/Present mismatch)" />
+
+        <!-- Status -->
+        <Label fx:id="statusLabel" layoutX="238.0" layoutY="358.0" prefHeight="18.0" prefWidth="182.0" text="" />
+        <Button layoutX="549.0" layoutY="325.0" onAction="#returnBtn" text="Return Home" textFill="#1bb74f" />
+
+    </children>
+</AnchorPane>

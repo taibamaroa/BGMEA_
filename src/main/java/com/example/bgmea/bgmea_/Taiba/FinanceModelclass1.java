@@ -1,7 +1,6 @@
 package com.example.bgmea.bgmea_.Taiba;
 
 
-import java.io.Serializable;
 import java.time.LocalDate;
 
 public class FinanceModelclass1  {

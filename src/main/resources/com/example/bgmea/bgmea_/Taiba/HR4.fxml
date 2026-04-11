@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bgmea.bgmea_.Taiba.HR4">
+
+    <children>
+
+        <!-- Title -->
+        <Label layoutX="198.0" layoutY="45.0" prefHeight="26.0" prefWidth="209.0" style="-fx-font-size:16px; -fx-font-weight:bold;" text="Labor Dispute Case" textFill="#1bb74f" />
+
+        <!-- Event 1: Select Date -->
+        <Label layoutX="62.0" layoutY="122.0" text="Case Date" />
+        <DatePicker fx:id="caseDatePicker" layoutX="182.0" layoutY="117.0" />
+
+        <!-- Event 2: Complainant Name -->
+        <Label layoutX="62.0" layoutY="172.0" text="Complainant Name" />
+        <TextField fx:id="nameField" layoutX="182.0" layoutY="167.0" prefWidth="180" />
+
+        <!-- Event 3: Open Case -->
+        <Button layoutX="134.0" layoutY="261.0" onAction="#opencaseBtn" prefHeight="26.0" prefWidth="198.0" text="Open Case" />
+
+        <!-- Show Case ID -->
+        <Label layoutX="89.0" layoutY="219.0" text="Case ID" />
+
+        <!-- Status Message -->
+        <Label fx:id="statusLabel" layoutX="205.0" layoutY="352.0" prefHeight="18.0" prefWidth="129.0" text="" />
+        <TextField fx:id="caseid" layoutX="182.0" layoutY="215.0" prefWidth="180" />
+        <Button layoutX="421.0" layoutY="335.0" onAction="#returnBtn" text="Return Home" textFill="#1bb74f" />
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bgmea.bgmea_.Taiba.HR5">
+
+    <children>
+
+        <!-- Title -->
+        <Label layoutX="229.0" layoutY="27.0" prefHeight="32.0" prefWidth="194.0" style="-fx-font-size:16px; -fx-font-weight:bold;" text="Issue ID Cards" textFill="#1bb74f" />
+
+        <!-- TableView: Unprinted Cards -->
+        <TableView fx:id="workerTable" layoutX="37.0" layoutY="181.0" prefHeight="131.0" prefWidth="350">
+
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="100" text="Worker ID" />
+                <TableColumn fx:id="colName" prefWidth="120" text="Name" />
+                <TableColumn fx:id="colDept" prefWidth="120" text="Department" />
+            </columns>
+
+        </TableView>
+
+        <!-- Generate Button -->
+        <Button layoutX="120" layoutY="330" onAction="#generateBtn" text="Generate Card" />
+
+        <!-- Preview Section -->
+        <Label layoutX="422.0" layoutY="163.0" style="-fx-font-weight:bold;" text="Card Preview : " />
+
+        <Label fx:id="previewLabel" layoutX="422.0" layoutY="197.0" prefHeight="106.0" prefWidth="222.0" style="-fx-border-color:black; -fx-padding:10;" text="" />
+
+        <!-- Status -->
+        <Label fx:id="statusLabel" layoutX="268.0" layoutY="333.0" prefHeight="18.0" prefWidth="118.0" text="" />
+        <Button layoutX="540.0" layoutY="343.0" onAction="#returnBtn" text="Return Home" textFill="#1bb74f" />
+        <Label layoutX="48.0" layoutY="97.0" text="Worker ID:" />
+        <Label layoutX="59.0" layoutY="141.0" text="Name :" />
+        <Label layoutX="318.0" layoutY="106.0" text="Department :" />
+        <TextField fx:id="workeridTF" layoutX="119.0" layoutY="93.0" />
+        <TextField fx:id="nameTF" layoutX="119.0" layoutY="137.0" />
+        <TextField fx:id="DepertmentTF" layoutX="405.0" layoutY="106.0" />
+
+    </children>
+</AnchorPane>
