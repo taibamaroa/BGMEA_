@@ -8,9 +8,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.control.cell.PropertyValueFactory;
-
-import java.util.ArrayList;
 
 public class Qualityinspectorgoal5 {
 
@@ -21,16 +18,16 @@ public class Qualityinspectorgoal5 {
     private TextField batchIdField;
 
     @FXML
-    private TableColumn<QualityinspectorModelclass3, String> colAction;
+    private TableColumn<?, ?> colAction;
 
     @FXML
-    private TableColumn<QualityinspectorModelclass3, String> colBatchId;
+    private TableColumn<?, ?> colBatchId;
 
     @FXML
-    private TableColumn<QualityinspectorModelclass3, String> colDate;
+    private TableColumn<?, ?> colDate;
 
     @FXML
-    private TableColumn<QualityinspectorModelclass3, String> colStatus;
+    private TableColumn<?, ?> colStatus;
 
     @FXML
     private TextField cureectiveTF;
@@ -42,33 +39,16 @@ public class Qualityinspectorgoal5 {
     private TextArea reasonArea;
 
     @FXML
-    private TableView<QualityinspectorModelclass3> rejectedTable;
+    private TableView<?> rejectedTable;
 
-    static ArrayList<QualityinspectorModelclass3> list = new ArrayList<>();
     @FXML
-    private TextField cureectiveTF;
+    void ReturnHomeBtn(ActionEvent event) {
+
+    }
+
     @FXML
-    private DatePicker datepicker;
-    @FXML
-    private TextField batchIdField;
+    void rejectdata(ActionEvent event) {
 
-    @javafx.fxml.FXML
-    public void initialize() {
-        colBatchId.setCellValueFactory(new PropertyValueFactory<>("batchId"));
-        colDate.setCellValueFactory(new PropertyValueFactory<>("date"));
-        colStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
-        colAction.setCellValueFactory(new PropertyValueFactory<>("action"));
+    }
 
-        rejectedTable.getItems().addAll(list);
-
-        @FXML
-        void ReturnHomeBtn (ActionEvent event){
-
-        }
-
-        @FXML
-        void rejectdata (ActionEvent event){
-
-        }
-
-    }}
+}

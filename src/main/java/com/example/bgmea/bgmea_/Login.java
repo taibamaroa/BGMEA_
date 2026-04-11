@@ -53,13 +53,13 @@ public class Login {
 
             //protity
         }else if (username.equals(ProductionManagerID) && password.equals(ProductionManagerpassword)) {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/bgmea/Shahtaz/ProductionManagerDashboard.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/bgmea/bgmea_/protity/ProductionManagerDashboard.fxml"));
             Parent root = loader.load();
             Stage stage = (Stage) usernameTextField.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();
         }else if (username.equals(QualityinspectorID) && password.equals(Qualityinspectorpassword)) {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/bgmea/Shahtaz/QualityinspectorDashboard.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/bgmea/bgmea_protiy/QualityinspectorDashboard.fxml"));
             Parent root = loader.load();
             Stage stage = (Stage) usernameTextField.getScene().getWindow();
             stage.setScene(new Scene(root));
