@@ -26,7 +26,7 @@ public class ProductionManagergoal1 {
     private TextField workerField;
 
 
-    static ArrayList<ProductionManagerModelclass1> list = new ArrayList<>();
+
 
     @FXML
     public void initialize() {
@@ -67,24 +67,24 @@ public class ProductionManagergoal1 {
             ProductionManagerModelclass1 data =
                     new ProductionManagerModelclass1(line,workers,"Assigned");
 
-            list.add(data);
+
 
 
             messageLabel.setText("Saved successfully!");
 
             workerField.clear();
             targetField.clear();
-            File f = new File("ProductionPlan.bin");
-            ObjectOutputStream oos;
-
-            if (f.exists()) {
-                oos = new AppendableObjectOutputStream(new FileOutputStream(f, true));
-            } else {
-                oos = new ObjectOutputStream(new FileOutputStream(f));
-            }
-
-            oos.writeObject(data);
-            oos.close();
+//            File f = new File("ProductionPlan.bin");
+//            ObjectOutputStream oos;
+//
+//            if (f.exists()) {
+//                oos = new AppendableObjectOutputStream(new FileOutputStream(f, true));
+//            } else {
+//                oos = new ObjectOutputStream(new FileOutputStream(f));
+//            }
+//
+//            oos.writeObject(data);
+//            oos.close();
 
 
         } catch (NumberFormatException e) {

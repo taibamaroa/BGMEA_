@@ -68,16 +68,16 @@ public class Qualityinspectorgoal1
             QualityinspectorModelclass2 data =
                     new QualityinspectorModelclass2(id, name, date, status);
 
-            File f = new File("QualityData.bin");
-            ObjectOutputStream oos;
-            if (f.exists()) {
-                oos = new AppendableObjectOutputStream(new FileOutputStream(f, true));
-            } else {
-                oos = new ObjectOutputStream(new FileOutputStream(f));
-            }
-
-            oos.writeObject(data);
-            oos.close();
+//            File f = new File("QualityData.bin");
+//            ObjectOutputStream oos;
+//            if (f.exists()) {
+//                oos = new AppendableObjectOutputStream(new FileOutputStream(f, true));
+//            } else {
+//                oos = new ObjectOutputStream(new FileOutputStream(f));
+//            }
+//
+//            oos.writeObject(data);
+//            oos.close();
             textlabel.setText("Saved successfully!");
 
 
