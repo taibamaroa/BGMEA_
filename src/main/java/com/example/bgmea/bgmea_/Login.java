@@ -30,13 +30,13 @@ public class Login {
         String password = passwordTextField.getText().trim();
 // Taiba
         if (username.equals(FinanceID) && password.equals(Financepassword)) {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/bgmea/Taiba/FinanceDashboard.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/bgmea/bgmea_/Taiba/FinanceDashboard.fxml"));
             Parent root = loader.load();
             Stage stage = (Stage) usernameTextField.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();
         } else if (username.equals(HRID) && password.equals(HRpassword)) {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/bgmea/Taiba/HRDashboard.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/bgmea/bgmea_/Taiba/HRDashboard.fxml"));
             Parent root = loader.load();
             Stage stage = (Stage) usernameTextField.getScene().getWindow();
             stage.setScene(new Scene(root));

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bgmea.bgmea_.Taiba.FinanceDashboard">
+    <children>
+        <Label layoutX="250" layoutY="20" style="-fx-font-size:18px; -fx-font-weight:bold;" text="Finance Dashboard" textFill="#1bb74f" />
+        <Button layoutX="80.0" layoutY="130.0" onAction="#goToFinance2" prefWidth="200" text=" Approve UD Fees" textFill="#1bb74f" />
+        <Button layoutX="80.0" layoutY="180.0" onAction="#goToFinance3" prefWidth="200" text="Welfare Fund Payout" textFill="#1bb74f" />
+        <Button layoutX="80.0" layoutY="230.0" onAction="#goToFinance4" prefWidth="200" text="Audit Fee Collection" textFill="#1bb74f" />
+        <Button layoutX="403.0" layoutY="80.0" onAction="#goToFinance5" prefWidth="200" text="Expense Tracking" textFill="#1bb74f" />
+        <Button layoutX="403.0" layoutY="130.0" onAction="#goToFinance6" prefWidth="200" text="Bank Statement Sync" textFill="#1bb74f" />
+        <Button layoutX="403.0" layoutY="180.0" onAction="#goToFinance7" prefWidth="200" text="Monthly Tax Report" textFill="#1bb74f" />
+        <Button layoutX="403.0" layoutY="230.0" onAction="#goToFinance8" prefWidth="200" text="Salary Disbursement" textFill="#1bb74f" />
+        <Button layoutX="300" layoutY="300" onAction="#Logout" prefWidth="120" text="Logout" textFill="#1bb74f" />
+        <Button layoutX="80.0" layoutY="79.0" mnemonicParsing="false" onAction="#goToFinance1" prefHeight="26.0" prefWidth="200.0" text=" Membership Renewal" textFill="#1bb74f" />
+    </children>
+</AnchorPane>
